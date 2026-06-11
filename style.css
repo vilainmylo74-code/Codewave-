@@ -1006,6 +1006,10 @@ body.modal-open { overflow: hidden; }
   .cf-row { grid-template-columns: 1fr; }
   .reassurance-sep { display: none; }
   .reassurance-item { padding: .4rem 1rem; }
+  .project-card-next { flex-direction: column; }
+  .project-card-next .project-thumb-next { width: 100%; min-width: unset; min-height: 160px; }
+  .project-card-next .project-info { padding: 1.4rem 1.4rem .5rem; }
+  .project-card-next .project-next-btn { margin: 0; border-radius: 0; }
   footer { flex-direction: column; text-align: center; }
   .footer-social { justify-content: center; }
   .ms-hero { padding: 3rem 1.5rem 2.5rem; min-height: 300px; }
