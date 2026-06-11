@@ -433,9 +433,21 @@ h2 {
 
 /* ── 4ÈME CARTE ── */
 .project-card-next {
+  grid-column: 1 / -1;
   background: linear-gradient(135deg, rgba(124,111,255,.08), rgba(56,232,197,.06));
   border-color: rgba(124,111,255,.25);
   cursor: default;
+  display: flex; flex-direction: row; align-items: center;
+  border-radius: var(--radius-lg); overflow: hidden;
+}
+.project-card-next .project-thumb-next {
+  width: 180px; min-width: 180px; height: 100%;
+  min-height: 130px; flex-shrink: 0;
+}
+.project-card-next .project-info { flex: 1; padding: 1.6rem 2rem; }
+.project-card-next .project-next-btn {
+  margin: 0 2rem; white-space: nowrap;
+  border-radius: 999px; padding: .85rem 1.8rem;
 }
 .project-thumb-next {
   background: linear-gradient(135deg,#0d0d1a,#1a1a35) !important;
