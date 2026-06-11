@@ -293,6 +293,23 @@ h2 {
   position: relative;
 }
 .project-card:hover { transform: translateY(-6px); box-shadow: 0 24px 64px rgba(0,0,0,.45); }
+
+.card-pulse {
+  position: absolute; top: .9rem; right: .9rem;
+  width: 10px; height: 10px; z-index: 3;
+}
+.card-pulse::before, .card-pulse::after {
+  content: ''; position: absolute; inset: 0; border-radius: 50%; background: var(--p3);
+}
+.card-pulse::before { animation: cardPulseRing 2s ease-out infinite; opacity: 0; }
+.card-pulse::after  { transform: scale(.55); box-shadow: 0 0 6px var(--p3); }
+@keyframes cardPulseRing {
+  0%   { transform: scale(.55); opacity: .8; }
+  100% { transform: scale(2.8); opacity: 0; }
+}
+.project-card:nth-child(2) .card-pulse::before { animation-delay: .6s; }
+.project-card:nth-child(3) .card-pulse::before { animation-delay: 1.2s; }
+
 .project-thumb {
   height: 190px; display: flex; align-items: center; justify-content: center;
   font-size: 3.2rem; position: relative; overflow: hidden;
