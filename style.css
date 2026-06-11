@@ -401,6 +401,108 @@ h2 {
 }
 .contact-meta span { display: flex; align-items: center; gap: .4rem; }
 
+/* ── BURGER MENU ── */
+.burger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: .4rem; z-index: 201;
+}
+.burger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--white); border-radius: 2px;
+  transition: transform .3s ease, opacity .3s ease;
+}
+.burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── RÉASSURANCE ── */
+.reassurance-strip {
+  display: flex; align-items: center; justify-content: center;
+  flex-wrap: wrap; gap: 0;
+  background: var(--surface);
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  padding: 1rem 5%;
+}
+.reassurance-item {
+  display: flex; align-items: center; gap: .5rem;
+  font-size: .82rem; font-weight: 600; color: rgba(255,255,255,.75);
+  padding: .5rem 1.5rem;
+}
+.reassurance-item span { font-size: 1rem; }
+.reassurance-sep { width: 1px; height: 20px; background: var(--border); }
+
+/* ── 4ÈME CARTE ── */
+.project-card-next {
+  background: linear-gradient(135deg, rgba(124,111,255,.08), rgba(56,232,197,.06));
+  border-color: rgba(124,111,255,.25);
+  cursor: default;
+}
+.project-thumb-next {
+  background: linear-gradient(135deg,#0d0d1a,#1a1a35) !important;
+  position: relative; overflow: hidden;
+}
+.ptn-glow {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(124,111,255,.15) 0%, transparent 70%);
+  animation: ptnPulse 3s ease-in-out infinite alternate;
+}
+@keyframes ptnPulse { 0%{opacity:.5} 100%{opacity:1} }
+.ptn-icon {
+  position: relative; z-index: 1;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--p1), var(--p3));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  animation: gradShift 4s linear infinite;
+}
+.project-next-btn {
+  display: block; text-align: center;
+  background: linear-gradient(135deg, var(--p1), var(--p3));
+  color: var(--white); text-decoration: none;
+  padding: .85rem; font-weight: 700; font-size: .88rem;
+  transition: opacity .2s;
+}
+.project-next-btn:hover { opacity: .85; }
+
+/* ── CONTACT 2 COLONNES ── */
+.contact-wrapper-2col {
+  max-width: 1000px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+  align-items: start;
+}
+.contact-info { text-align: left; }
+.contact-info h2 { font-size: clamp(1.8rem,4vw,2.6rem); margin-bottom: .8rem; }
+.contact-info > p { color: var(--muted); font-size: 1rem; margin-bottom: 1.5rem; line-height: 1.75; }
+
+/* Form */
+.contact-form {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 2rem;
+}
+.cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.cf-field { display: flex; flex-direction: column; gap: .5rem; margin-bottom: 1rem; }
+.cf-field label { font-size: .78rem; font-weight: 700; color: rgba(255,255,255,.6); letter-spacing: .06em; text-transform: uppercase; }
+.cf-field input,
+.cf-field select,
+.cf-field textarea {
+  background: rgba(255,255,255,.04); border: 1px solid var(--border);
+  border-radius: 10px; padding: .75rem 1rem;
+  color: var(--white); font-family: 'Inter', sans-serif; font-size: .92rem;
+  outline: none; transition: border-color .25s, box-shadow .25s;
+  width: 100%;
+}
+.cf-field input::placeholder,
+.cf-field textarea::placeholder { color: rgba(255,255,255,.25); }
+.cf-field input:focus,
+.cf-field select:focus,
+.cf-field textarea:focus {
+  border-color: rgba(124,111,255,.6);
+  box-shadow: 0 0 0 3px rgba(124,111,255,.12);
+}
+.cf-field select { cursor: pointer; }
+.cf-field select option { background: var(--bg2); }
+.cf-field textarea { resize: vertical; min-height: 110px; }
+.cf-submit { width: 100%; justify-content: center; margin-top: .5rem; }
+
 /* ── FOOTER ── */
 footer {
   background: var(--bg2); padding: 2.5rem 5%;
@@ -860,12 +962,40 @@ body.modal-open { overflow: hidden; }
 .ms-stat-label { font-size: .8rem; color: var(--muted); margin-top: .3rem; display: block; }
 
 /* ── RESPONSIVE ── */
+/* ── FOOTER SOCIAL ── */
+.footer-social { display: flex; gap: .8rem; align-items: center; }
+.footer-social a {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(255,255,255,.07); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--muted); transition: background .2s, color .2s, transform .2s;
+}
+.footer-social a:hover { background: rgba(124,111,255,.2); color: var(--white); transform: translateY(-2px); }
+
 @media (max-width: 768px) {
-  .nav-links { display: none; }
+  .burger { display: flex; }
+  .nav-cta { display: none; }
+  .nav-links {
+    position: fixed; top: 60px; left: 0; right: 0; z-index: 198;
+    flex-direction: column; gap: 0;
+    background: rgba(7,8,15,.97); backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: .5rem 0 1rem;
+    transform: translateY(-110%); opacity: 0;
+    transition: transform .35s cubic-bezier(.4,0,.2,1), opacity .3s;
+    pointer-events: none;
+  }
+  .nav-links.open { transform: translateY(0); opacity: 1; pointer-events: all; }
+  .nav-links li a { display: block; padding: .9rem 2rem; font-size: .95rem; color: var(--white); }
+  .nav-links li a::after { display: none; }
   .nav-cta { padding: .5rem 1rem; font-size: .82rem; }
   section { padding: 5rem 5%; }
-  .contact-card { padding: 2.5rem 1.8rem; }
+  .contact-wrapper-2col { grid-template-columns: 1fr; gap: 2rem; }
+  .cf-row { grid-template-columns: 1fr; }
+  .reassurance-sep { display: none; }
+  .reassurance-item { padding: .4rem 1rem; }
   footer { flex-direction: column; text-align: center; }
+  .footer-social { justify-content: center; }
   .ms-hero { padding: 3rem 1.5rem 2.5rem; min-height: 300px; }
   .ms-section { padding: 2rem 1.5rem; }
   .ms-gallery-section { padding: 0 1.5rem 2rem; }

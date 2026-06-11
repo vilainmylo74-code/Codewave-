@@ -59,6 +59,20 @@ document.addEventListener('keydown', e => {
     document.querySelectorAll('.modal-overlay.open').forEach(closeModal);
 });
 
+/* burger menu */
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('nav-links');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    burger.classList.remove('open');
+    navLinks.classList.remove('open');
+  });
+});
+
 /* smooth anchors */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
