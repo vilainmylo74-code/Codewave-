@@ -15,6 +15,17 @@
 </head>
 <body>
 
+<!-- LOADER -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <span class="loader-logo">Codewave</span>
+    <span class="loader-bar"></span>
+  </div>
+</div>
+
+<!-- GRAIN -->
+<div id="grain" aria-hidden="true"></div>
+
 <!-- SCROLL PROGRESS -->
 <div id="sp"></div>
 
@@ -43,6 +54,7 @@
 <section id="hero">
   <div class="hero-mesh"></div>
   <div class="hero-grid"></div>
+  <div class="hero-spotlight"></div>
   <div class="blob b1"></div>
   <div class="blob b2"></div>
   <div class="blob b3"></div>
@@ -52,16 +64,16 @@
     Studio Web Freelance · Fleurance (32)
   </div>
 
-  <h1>Nous concevons des sites web<br/>qui <span class="grad-text">génèrent des résultats</span></h1>
+  <h1>Nous concevons des sites web<br/>qui <span class="grad-text" id="rot-word">génèrent des résultats</span></h1>
 
-  <p class="hero-sub">Codewave est votre partenaire digital de confiance. Nous concevons des sites web modernes, performants et orientés conversion — pour transformer vos visiteurs en clients.</p>
+  <p class="hero-sub">Codewave conçoit des sites modernes, rapides et pensés pour la conversion — pour les artisans, commerces et indépendants qui veulent transformer leurs visiteurs en clients.</p>
 
   <div class="hero-cta">
-    <a href="#contact" class="btn-primary">
+    <a href="#contact" class="btn-primary magnetic">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
       Démarrer un projet
     </a>
-    <a href="#projets" class="btn-ghost">Découvrir nos réalisations →</a>
+    <a href="#projets" class="btn-ghost magnetic">Découvrir nos réalisations →</a>
   </div>
 
 </section>
@@ -69,34 +81,46 @@
 <!-- MARQUEE -->
 <div class="marquee-wrap">
   <div class="marquee-track">
-    <span>⚡ Sites Web Sur-Mesure</span>
-    <span>✦ Design Premium</span>
-    <span>🚀 Livraison Rapide</span>
-    <span>✦ SEO Optimisé</span>
-    <span>⚡ Responsive Mobile</span>
-    <span>✦ Tarifs Accessibles</span>
-    <span>🎯 Conversion Maximisée</span>
-    <span>✦ Fleurance · Gers · France</span>
-    <span>⚡ Sites Web Sur-Mesure</span>
-    <span>✦ Design Premium</span>
-    <span>🚀 Livraison Rapide</span>
-    <span>✦ SEO Optimisé</span>
-    <span>⚡ Responsive Mobile</span>
-    <span>✦ Tarifs Accessibles</span>
-    <span>🎯 Conversion Maximisée</span>
-    <span>✦ Fleurance · Gers · France</span>
+    <span>Sites web sur-mesure</span>
+    <span>Design premium</span>
+    <span>Livraison rapide</span>
+    <span>SEO optimisé</span>
+    <span>Responsive mobile</span>
+    <span>Tarifs accessibles</span>
+    <span>Orienté conversion</span>
+    <span>Fleurance · Gers · France</span>
+    <span>Sites web sur-mesure</span>
+    <span>Design premium</span>
+    <span>Livraison rapide</span>
+    <span>SEO optimisé</span>
+    <span>Responsive mobile</span>
+    <span>Tarifs accessibles</span>
+    <span>Orienté conversion</span>
+    <span>Fleurance · Gers · France</span>
   </div>
 </div>
 
 <!-- RÉASSURANCE -->
 <div class="reassurance-strip">
-  <div class="reassurance-item"><span>🎁</span> Devis gratuit sous 24h</div>
+  <div class="reassurance-item">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
+    Devis gratuit sous 24h
+  </div>
   <div class="reassurance-sep"></div>
-  <div class="reassurance-item"><span>⚡</span> Livraison en 7 jours</div>
+  <div class="reassurance-item">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+    Livraison en 7 jours
+  </div>
   <div class="reassurance-sep"></div>
-  <div class="reassurance-item"><span>🛡️</span> Satisfait ou remboursé</div>
+  <div class="reassurance-item">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    Satisfait ou remboursé
+  </div>
   <div class="reassurance-sep"></div>
-  <div class="reassurance-item"><span>💬</span> Support inclus</div>
+  <div class="reassurance-item">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+    Support inclus
+  </div>
 </div>
 
 <!-- SERVICES -->
@@ -109,7 +133,9 @@
 
       <div class="service-card reveal">
         <div class="sc-glow" style="background:var(--p1)"></div>
-        <div class="sc-icon" style="background:rgba(124,111,255,.12)">🖥️</div>
+        <div class="sc-icon" style="background:rgba(124,111,255,.12);color:#a79dff">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
         <h3>Site Vitrine</h3>
         <p>Donnez à votre activité la vitrine qu'elle mérite. Un site élégant, professionnel et optimisé — idéal pour artisans, commerces et professions libérales.</p>
         <span class="sc-price">À partir de 150 €</span>
@@ -117,7 +143,9 @@
 
       <div class="service-card reveal delay-1">
         <div class="sc-glow" style="background:var(--p2)"></div>
-        <div class="sc-icon" style="background:rgba(255,95,160,.12)">🚀</div>
+        <div class="sc-icon" style="background:rgba(255,95,160,.12);color:#ff8dbb">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
         <h3>Landing Page</h3>
         <p>Une page haute-impact, 100 % orientée conversion. Transformez chaque visiteur en prospect qualifié — parfaite pour une offre, un lancement ou une campagne.</p>
         <span class="sc-price">À partir de 80 €</span>
@@ -125,7 +153,9 @@
 
       <div class="service-card reveal delay-2">
         <div class="sc-glow" style="background:var(--p3)"></div>
-        <div class="sc-icon" style="background:rgba(56,232,197,.12)">⚡</div>
+        <div class="sc-icon" style="background:rgba(56,232,197,.12);color:#6df0d4">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+        </div>
         <h3>Refonte de site</h3>
         <p>Votre site actuel ne reflète plus votre image ou ne génère pas assez de contacts ? Nous le repensons de A à Z pour le rendre moderne, performant et convaincant.</p>
         <span class="sc-price">À partir de 120 €</span>
@@ -143,8 +173,19 @@
     <p class="section-intro reveal delay-2">Découvrez quelques-unes de nos réalisations — des sites conçus pour mettre en valeur des activités locales et générer de vrais résultats.</p>
     <div class="projects-grid">
 
-      <div class="project-card reveal" data-modal="bella">
-        <div class="project-thumb" style="background:linear-gradient(135deg,#2d1b4e,#6b3fa0)">🍕<div class="card-click-hint"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M10 14L21 3M9 21H3V3"/></svg>Explorer</div></div>
+      <div class="project-card reveal" data-modal="bella" tabindex="0" role="button" aria-label="Voir la maquette La Bella Piazza">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#2d1b4e,#6b3fa0)">
+          <div class="mini-browser" style="--mba:#ffb061">
+            <div class="mb-bar"><i></i><i></i><i></i><span class="mb-url">labellapiazza.fr</span></div>
+            <div class="mb-body">
+              <span class="mb-chip"></span>
+              <span class="mb-title"></span>
+              <span class="mb-line"></span>
+              <div class="mb-row"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="card-click-hint"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M10 14L21 3M9 21H3V3"/></svg>Explorer</div>
+        </div>
         <div class="project-info">
           <span class="project-tag">Restaurant</span>
           <h3>La Bella Piazza</h3>
@@ -153,8 +194,19 @@
         <div class="project-view-btn">Voir le site →</div>
       </div>
 
-      <div class="project-card reveal delay-1" data-modal="elise">
-        <div class="project-thumb" style="background:linear-gradient(135deg,#0d2a4a,#1a5f8a)">✂️<div class="card-click-hint"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M10 14L21 3M9 21H3V3"/></svg>Explorer</div></div>
+      <div class="project-card reveal delay-1" data-modal="elise" tabindex="0" role="button" aria-label="Voir la maquette Salon Élise">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#0d2a4a,#1a5f8a)">
+          <div class="mini-browser" style="--mba:#c77dff">
+            <div class="mb-bar"><i></i><i></i><i></i><span class="mb-url">salon-elise.fr</span></div>
+            <div class="mb-body">
+              <span class="mb-chip"></span>
+              <span class="mb-title"></span>
+              <span class="mb-line"></span>
+              <div class="mb-row"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="card-click-hint"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M10 14L21 3M9 21H3V3"/></svg>Explorer</div>
+        </div>
         <div class="project-info">
           <span class="project-tag">Artisan</span>
           <h3>Salon Élise</h3>
@@ -163,8 +215,19 @@
         <div class="project-view-btn">Voir le site →</div>
       </div>
 
-      <div class="project-card reveal delay-2" data-modal="thomas">
-        <div class="project-thumb" style="background:linear-gradient(135deg,#0a2a1a,#1a6b35)">💪<div class="card-click-hint"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M10 14L21 3M9 21H3V3"/></svg>Explorer</div></div>
+      <div class="project-card reveal delay-2" data-modal="thomas" tabindex="0" role="button" aria-label="Voir la maquette FitByThomas">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#0a2a1a,#1a6b35)">
+          <div class="mini-browser" style="--mba:#38e8c5">
+            <div class="mb-bar"><i></i><i></i><i></i><span class="mb-url">fitbythomas.fr</span></div>
+            <div class="mb-body">
+              <span class="mb-chip"></span>
+              <span class="mb-title"></span>
+              <span class="mb-line"></span>
+              <div class="mb-row"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="card-click-hint"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M10 14L21 3M9 21H3V3"/></svg>Explorer</div>
+        </div>
         <div class="project-info">
           <span class="project-tag">Coach sportif</span>
           <h3>FitByThomas</h3>
@@ -185,22 +248,30 @@
     <p class="section-intro reveal delay-2">Une méthode claire, rapide et transparente — du premier échange à la mise en ligne, sans mauvaise surprise.</p>
     <div class="process-grid">
       <div class="process-step reveal">
-        <div class="ps-icon">💬</div>
+        <div class="ps-icon" style="background:rgba(124,111,255,.1);color:#a79dff">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+        </div>
         <h3>Échange</h3>
         <p>Nous prenons le temps de comprendre votre projet, vos objectifs et votre budget. Gratuit et sans engagement.</p>
       </div>
       <div class="process-step reveal delay-1">
-        <div class="ps-icon">🎨</div>
+        <div class="ps-icon" style="background:rgba(255,95,160,.1);color:#ff8dbb">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="11" cy="11" r="2"/></svg>
+        </div>
         <h3>Design</h3>
         <p>Nous concevons une maquette sur-mesure et l'affinons avec vous jusqu'à satisfaction totale.</p>
       </div>
       <div class="process-step reveal delay-2">
-        <div class="ps-icon">⚙️</div>
+        <div class="ps-icon" style="background:rgba(56,232,197,.1);color:#6df0d4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
         <h3>Développement</h3>
         <p>Nous développons votre site : rapide, responsive et optimisé pour un référencement Google performant.</p>
       </div>
       <div class="process-step reveal delay-3">
-        <div class="ps-icon">🚀</div>
+        <div class="ps-icon" style="background:rgba(255,179,71,.1);color:#ffc985">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+        </div>
         <h3>Mise en ligne</h3>
         <p>Votre site est déployé et vous repartez avec toutes les clés pour le gérer en autonomie. Support inclus.</p>
       </div>
@@ -273,15 +344,40 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Codewave</div>
-  <p>© 2026 Codewave · Développement Web Professionnel · Fleurance</p>
-  <div class="footer-social">
-    <a href="https://github.com/vilainmylo74-code" target="_blank" rel="noopener" aria-label="GitHub">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-    </a>
-    <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-    </a>
+  <div class="footer-grid">
+    <div class="footer-col footer-brand">
+      <div class="footer-logo">Codewave</div>
+      <p>Studio web indépendant basé à Fleurance, dans le Gers. Des sites pensés pour convertir, livrés rapidement, partout en France.</p>
+      <div class="footer-social">
+        <a href="https://github.com/vilainmylo74-code" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:wavecode94@gmail.com">wavecode94@gmail.com</a></li>
+        <li><span class="footer-muted">Fleurance, Gers (32)</span></li>
+        <li><span class="footer-muted">Disponible partout en France</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Codewave · Tous droits réservés</span>
+    <span>Conçu et développé à Fleurance</span>
   </div>
 </footer>
 
@@ -290,25 +386,27 @@
 ══════════════════════════════ -->
 <div class="modal-overlay" id="modal-bella">
   <div class="modal-box">
-    <div class="modal-top-bar"><button class="modal-close" aria-label="Fermer">✕</button></div>
+    <div class="modal-top-bar">
+      <button class="modal-close" aria-label="Fermer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
     <div class="ms ms-bella">
 
       <!-- HERO -->
       <div class="ms-hero ms-hero-bella">
         <div class="ms-hero-floats">
-          <span class="ms-float" style="font-size:7rem;top:5%;right:6%;animation-duration:7s">🍕</span>
-          <span class="ms-float" style="font-size:3.5rem;top:65%;right:18%;animation-duration:9s;animation-delay:-3s">🍷</span>
-          <span class="ms-float" style="font-size:2.5rem;top:18%;right:28%;animation-duration:6s;animation-delay:-1.5s">🌿</span>
-          <span class="ms-float" style="font-size:4rem;bottom:8%;right:5%;animation-duration:8s;animation-delay:-4s">🍝</span>
+          <span class="ms-orb" style="width:280px;height:280px;background:#ff8c42;top:-70px;right:-50px"></span>
+          <span class="ms-orb" style="width:180px;height:180px;background:#ffd166;bottom:-60px;right:24%;animation-delay:-3s"></span>
+          <span class="ms-ring" style="width:300px;height:300px;top:8%;right:6%"></span>
+          <span class="ms-ring" style="width:140px;height:140px;bottom:14%;right:32%;animation-delay:-4s"></span>
         </div>
         <div class="ms-hero-content">
-          <span class="ms-badge bella-badge">🇮🇹 Restaurant Gastronomique</span>
+          <span class="ms-badge bella-badge">Restaurant Gastronomique Italien</span>
           <h1>La Bella<br><span class="ms-grad-bella">Piazza</span></h1>
           <p>Saveurs authentiques d'Italie, transmises de génération en génération</p>
           <div class="ms-hero-tags">
-            <span>🍕 Pizzas au feu de bois</span>
-            <span>🍝 Pâtes fraîches maison</span>
-            <span>🍷 Cave à vins</span>
+            <span>Pizzas au feu de bois</span>
+            <span>Pâtes fraîches maison</span>
+            <span>Cave à vins</span>
           </div>
         </div>
       </div>
@@ -319,7 +417,7 @@
         <div class="ms-strip-sep"></div>
         <div class="ms-strip-item"><span class="ms-strip-num" data-count="2000">0</span><sup>+</sup><small>clients fidèles</small></div>
         <div class="ms-strip-sep"></div>
-        <div class="ms-strip-item"><span class="ms-strip-txt">4.9</span><sup>⭐</sup><small>sur Google</small></div>
+        <div class="ms-strip-item"><span class="ms-strip-txt">4.9</span><span class="strip-star"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><small>sur Google</small></div>
         <div class="ms-strip-sep"></div>
         <div class="ms-strip-item"><span class="ms-strip-txt">100%</span><small>produits frais</small></div>
       </div>
@@ -331,7 +429,9 @@
           <h2>Menu du moment</h2>
           <div class="ms-menu-grid">
             <div class="ms-menu-cat ms-anim">
-              <div class="ms-menu-icon">🥗</div>
+              <div class="ms-menu-icon" style="background:rgba(56,232,197,.1);color:#6df0d4">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 019.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+              </div>
               <h3>Antipasti</h3>
               <div class="ms-dish"><span>Bruschetta al pomodoro</span><span>8€</span></div>
               <div class="ms-dish"><span>Burrata & roquette</span><span>12€</span></div>
@@ -339,7 +439,9 @@
               <div class="ms-dish"><span>Soupe de tomates anciennes</span><span>9€</span></div>
             </div>
             <div class="ms-menu-cat ms-anim ms-anim-d1">
-              <div class="ms-menu-icon">🍕</div>
+              <div class="ms-menu-icon" style="background:rgba(255,140,66,.1);color:#ffb061">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 11h.01"/><path d="M11 15h.01"/><path d="M16 16h.01"/><path d="M2 16l20 6-6-20A20 20 0 002 16"/><path d="M5.71 17.11a17.04 17.04 0 0111.4-11.4"/></svg>
+              </div>
               <h3>Pizzas</h3>
               <div class="ms-dish"><span>Margherita DOP</span><span>11€</span></div>
               <div class="ms-dish"><span>Quattro Stagioni</span><span>14€</span></div>
@@ -347,7 +449,9 @@
               <div class="ms-dish"><span>Tartufo e funghi</span><span>16€</span></div>
             </div>
             <div class="ms-menu-cat ms-anim ms-anim-d2">
-              <div class="ms-menu-icon">🍝</div>
+              <div class="ms-menu-icon" style="background:rgba(255,209,102,.1);color:#ffd166">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg>
+              </div>
               <h3>Pâtes & Risotti</h3>
               <div class="ms-dish"><span>Tagliatelle al ragù</span><span>14€</span></div>
               <div class="ms-dish"><span>Risotto aux truffes</span><span>18€</span></div>
@@ -356,10 +460,10 @@
             </div>
           </div>
           <div class="ms-desserts-row ms-anim ms-anim-d3">
-            <div class="ms-dessert-item"><span>🍮</span><p>Tiramisu</p><b>7€</b></div>
-            <div class="ms-dessert-item"><span>🥛</span><p>Panna cotta</p><b>6€</b></div>
-            <div class="ms-dessert-item"><span>🧁</span><p>Cannoli</p><b>8€</b></div>
-            <div class="ms-dessert-item"><span>🍦</span><p>Gelato</p><b>5€</b></div>
+            <div class="ms-dessert-item"><p>Tiramisu</p><b>7€</b></div>
+            <div class="ms-dessert-item"><p>Panna cotta</p><b>6€</b></div>
+            <div class="ms-dessert-item"><p>Cannoli</p><b>8€</b></div>
+            <div class="ms-dessert-item"><p>Gelato</p><b>5€</b></div>
           </div>
         </div>
       </div>
@@ -368,7 +472,7 @@
       <div class="ms-split-section bella-split">
         <div class="ms-split-visual">
           <div class="ms-split-art" style="background:linear-gradient(135deg,#2a0800,#7a2800)">
-            <span class="ms-art-emoji" style="animation-duration:5s">👨‍🍳</span>
+            <svg class="ms-art-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21a1 1 0 001-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 00-2.134-7.589 5 5 0 00-9.186 0 4 4 0 00-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 001 1z"/><path d="M6 17h12"/></svg>
             <div class="ms-art-ring"></div>
           </div>
         </div>
@@ -376,11 +480,11 @@
           <span class="ms-label">Notre histoire</span>
           <h2>La passion italienne<br>depuis 2009</h2>
           <p>La Bella Piazza est née d'une passion simple : partager les vraies saveurs de l'Italie. Notre chef Marco a grandi entre les fourneaux de sa grand-mère à Naples.</p>
-          <div class="ms-check-list">
-            <div class="ms-check"><span>🌾</span>Farine italienne importée directement</div>
-            <div class="ms-check"><span>🔥</span>Four à bois chauffé à 450°C</div>
-            <div class="ms-check"><span>🌿</span>Herbes fraîches du jardin</div>
-            <div class="ms-check"><span>🥩</span>Viandes sélectionnées chez l'artisan</div>
+          <div class="ms-check-list bella-checks">
+            <div class="ms-check">Farine italienne importée directement</div>
+            <div class="ms-check">Four à bois chauffé à 450°C</div>
+            <div class="ms-check">Herbes fraîches du jardin</div>
+            <div class="ms-check">Viandes sélectionnées chez l'artisan</div>
           </div>
         </div>
       </div>
@@ -391,12 +495,12 @@
           <span class="ms-label">Galerie</span>
           <h2>Nos créations</h2>
           <div class="ms-photos-grid">
-            <div class="ms-photo ms-anim" style="background:linear-gradient(135deg,#3d0800,#a83000)"><div class="ms-photo-inner"><span class="ms-photo-emoji">🍕</span></div><div class="ms-photo-cap">Margherita DOP</div></div>
-            <div class="ms-photo ms-anim ms-anim-d1" style="background:linear-gradient(135deg,#2d1a00,#7a4500)"><div class="ms-photo-inner"><span class="ms-photo-emoji">🍝</span></div><div class="ms-photo-cap">Tagliatelle al ragù</div></div>
-            <div class="ms-photo ms-anim ms-anim-d2" style="background:linear-gradient(135deg,#1a0a30,#4a1a80)"><div class="ms-photo-inner"><span class="ms-photo-emoji">🍷</span></div><div class="ms-photo-cap">Cave à vins</div></div>
-            <div class="ms-photo ms-anim ms-anim-d1" style="background:linear-gradient(135deg,#2a1500,#6b3a00)"><div class="ms-photo-inner"><span class="ms-photo-emoji">🍮</span></div><div class="ms-photo-cap">Tiramisu maison</div></div>
-            <div class="ms-photo ms-anim ms-anim-d2" style="background:linear-gradient(135deg,#0a2000,#1a5000)"><div class="ms-photo-inner"><span class="ms-photo-emoji">🌿</span></div><div class="ms-photo-cap">Produits du marché</div></div>
-            <div class="ms-photo ms-anim ms-anim-d3" style="background:linear-gradient(135deg,#1a0a00,#4a2000)"><div class="ms-photo-inner"><span class="ms-photo-emoji">👨‍🍳</span></div><div class="ms-photo-cap">Chef Marco en cuisine</div></div>
+            <div class="ms-photo ms-anim" style="background:linear-gradient(135deg,#3d0800,#a83000)"><div class="ms-photo-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 11h.01"/><path d="M11 15h.01"/><path d="M16 16h.01"/><path d="M2 16l20 6-6-20A20 20 0 002 16"/><path d="M5.71 17.11a17.04 17.04 0 0111.4-11.4"/></svg></div><div class="ms-photo-cap">Margherita DOP</div></div>
+            <div class="ms-photo ms-anim ms-anim-d1" style="background:linear-gradient(135deg,#2d1a00,#7a4500)"><div class="ms-photo-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg></div><div class="ms-photo-cap">Tagliatelle al ragù</div></div>
+            <div class="ms-photo ms-anim ms-anim-d2" style="background:linear-gradient(135deg,#1a0a30,#4a1a80)"><div class="ms-photo-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 15v7"/><path d="M12 15a5 5 0 005-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 005 5z"/></svg></div><div class="ms-photo-cap">Cave à vins</div></div>
+            <div class="ms-photo ms-anim ms-anim-d1" style="background:linear-gradient(135deg,#2a1500,#6b3a00)"><div class="ms-photo-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 110 8h-1"/><path d="M3 8h14v9a4 4 0 01-4 4H7a4 4 0 01-4-4z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg></div><div class="ms-photo-cap">Tiramisu maison</div></div>
+            <div class="ms-photo ms-anim ms-anim-d2" style="background:linear-gradient(135deg,#0a2000,#1a5000)"><div class="ms-photo-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 019.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div><div class="ms-photo-cap">Produits du marché</div></div>
+            <div class="ms-photo ms-anim ms-anim-d3" style="background:linear-gradient(135deg,#1a0a00,#4a2000)"><div class="ms-photo-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21a1 1 0 001-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 00-2.134-7.589 5 5 0 00-9.186 0 4 4 0 00-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 001 1z"/><path d="M6 17h12"/></svg></div><div class="ms-photo-cap">Chef Marco en cuisine</div></div>
           </div>
         </div>
       </div>
@@ -407,19 +511,27 @@
           <span class="ms-label">Avis clients</span>
           <h2>Ce qu'ils disent</h2>
           <div class="ms-reviews-grid">
-            <div class="ms-review ms-anim"><div class="ms-review-stars">⭐⭐⭐⭐⭐</div><p>"La meilleure pizza hors d'Italie. Les produits sont frais et l'ambiance est incroyable."</p><div class="ms-review-author"><div class="ms-avatar" style="background:linear-gradient(135deg,#ff6b35,#ffd700)">S</div><div><strong>Sophie M.</strong><span>Cliente depuis 2021</span></div></div></div>
-            <div class="ms-review ms-anim ms-anim-d1"><div class="ms-review-stars">⭐⭐⭐⭐⭐</div><p>"Un voyage en Italie sans prendre l'avion. Les pâtes fraîches et le tiramisu sont parfaits."</p><div class="ms-review-author"><div class="ms-avatar" style="background:linear-gradient(135deg,#a855f7,#ec4899)">J</div><div><strong>Jean-Pierre D.</strong><span>Client depuis 2020</span></div></div></div>
-            <div class="ms-review ms-anim ms-anim-d2"><div class="ms-review-stars">⭐⭐⭐⭐⭐</div><p>"On y va chaque semaine en famille. Le rapport qualité-prix est imbattable."</p><div class="ms-review-author"><div class="ms-avatar" style="background:linear-gradient(135deg,#06b6d4,#3b82f6)">M</div><div><strong>Marie & Paul L.</strong><span>Clients depuis 2019</span></div></div></div>
+            <div class="ms-review ms-anim"><div class="ms-review-stars" role="img" aria-label="5 étoiles sur 5"></div><p>"La meilleure pizza hors d'Italie. Les produits sont frais et l'ambiance est incroyable."</p><div class="ms-review-author"><div class="ms-avatar" style="background:linear-gradient(135deg,#ff6b35,#ffd700)">S</div><div><strong>Sophie M.</strong><span>Cliente depuis 2021</span></div></div></div>
+            <div class="ms-review ms-anim ms-anim-d1"><div class="ms-review-stars" role="img" aria-label="5 étoiles sur 5"></div><p>"Un voyage en Italie sans prendre l'avion. Les pâtes fraîches et le tiramisu sont parfaits."</p><div class="ms-review-author"><div class="ms-avatar" style="background:linear-gradient(135deg,#a855f7,#ec4899)">J</div><div><strong>Jean-Pierre D.</strong><span>Client depuis 2020</span></div></div></div>
+            <div class="ms-review ms-anim ms-anim-d2"><div class="ms-review-stars" role="img" aria-label="5 étoiles sur 5"></div><p>"On y va chaque semaine en famille. Le rapport qualité-prix est imbattable."</p><div class="ms-review-author"><div class="ms-avatar" style="background:linear-gradient(135deg,#06b6d4,#3b82f6)">M</div><div><strong>Marie & Paul L.</strong><span>Clients depuis 2019</span></div></div></div>
           </div>
         </div>
       </div>
 
       <!-- FOOTER STRIP -->
       <div class="ms-footer-strip bella-fstrip">
-        <div class="ms-fstrip-item"><span>🔥</span><div><b>Four à bois</b><p>Pizza cuites à 450°C</p></div></div>
-        <div class="ms-fstrip-item"><span>🌿</span><div><b>100% frais</b><p>Produits locaux & italiens</p></div></div>
-        <div class="ms-fstrip-item"><span>🍷</span><div><b>Cave à vins</b><p>+40 références italiennes</p></div></div>
-        <div class="ms-fstrip-item"><span>📅</span><div><b>Réservation</b><p>Conseillée le week-end</p></div></div>
+        <div class="ms-fstrip-item"><span class="fstrip-ic" style="color:#ffb061"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg></span><div><b>Four à bois</b><p>Pizzas cuites à 450°C</p></div></div>
+        <div class="ms-fstrip-item"><span class="fstrip-ic" style="color:#6df0d4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 019.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span><div><b>100% frais</b><p>Produits locaux & italiens</p></div></div>
+        <div class="ms-fstrip-item"><span class="fstrip-ic" style="color:#d9a7ff"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 15v7"/><path d="M12 15a5 5 0 005-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 005 5z"/></svg></span><div><b>Cave à vins</b><p>+40 références italiennes</p></div></div>
+        <div class="ms-fstrip-item"><span class="fstrip-ic" style="color:#ffd166"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><div><b>Réservation</b><p>Conseillée le week-end</p></div></div>
+      </div>
+
+      <!-- CTA DÉMO -->
+      <div class="ms-cta">
+        <span class="ms-cta-tag">Démonstration Codewave</span>
+        <h3>Envie d'un site comme celui-ci ?</h3>
+        <p>Ce mini-site est une maquette conçue par Codewave pour illustrer notre savoir-faire. Le vôtre pourrait être en ligne dans quelques jours.</p>
+        <button class="ms-cta-btn" data-goto-contact>Démarrer mon projet →</button>
       </div>
 
     </div>
@@ -431,25 +543,27 @@
 ══════════════════════════════ -->
 <div class="modal-overlay" id="modal-elise">
   <div class="modal-box">
-    <div class="modal-top-bar"><button class="modal-close" aria-label="Fermer">✕</button></div>
+    <div class="modal-top-bar">
+      <button class="modal-close" aria-label="Fermer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
     <div class="ms ms-elise">
 
       <!-- HERO -->
       <div class="ms-hero ms-hero-elise">
         <div class="ms-hero-floats">
-          <span class="ms-float" style="font-size:6rem;top:5%;right:6%;animation-duration:8s">✂️</span>
-          <span class="ms-float" style="font-size:3rem;top:60%;right:20%;animation-duration:6s;animation-delay:-2s">💄</span>
-          <span class="ms-float" style="font-size:2.5rem;top:22%;right:30%;animation-duration:7s;animation-delay:-3.5s">🌸</span>
-          <span class="ms-float" style="font-size:4rem;bottom:10%;right:5%;animation-duration:9s;animation-delay:-1s">💆‍♀️</span>
+          <span class="ms-orb" style="width:260px;height:260px;background:#c77dff;top:-60px;right:-40px"></span>
+          <span class="ms-orb" style="width:170px;height:170px;background:#ff5fa0;bottom:-50px;right:26%;animation-delay:-2s"></span>
+          <span class="ms-ring" style="width:280px;height:280px;top:10%;right:8%"></span>
+          <span class="ms-ring" style="width:130px;height:130px;bottom:16%;right:34%;animation-delay:-5s"></span>
         </div>
         <div class="ms-hero-content">
-          <span class="ms-badge elise-badge">✨ Salon Premium · Fleurance</span>
+          <span class="ms-badge elise-badge">Salon Premium · Fleurance</span>
           <h1>Salon<br><span class="ms-grad-elise">Élise</span></h1>
           <p>L'art de sublimer votre beauté avec des soins naturels et une expertise reconnue</p>
           <div class="ms-hero-tags">
-            <span>✂️ Coupe & Style</span>
-            <span>🎨 Coloration</span>
-            <span>🌿 Produits bio</span>
+            <span>Coupe & Style</span>
+            <span>Coloration</span>
+            <span>Produits bio</span>
           </div>
         </div>
       </div>
@@ -461,17 +575,23 @@
           <h2>La beauté, autrement</h2>
           <div class="ms-pillars">
             <div class="ms-pillar ms-anim" style="--pc:rgba(199,125,255,.25)">
-              <div class="ms-pillar-icon">🌿</div>
+              <div class="ms-pillar-icon" style="color:#6df0d4">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 019.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+              </div>
               <h3>100% Bio</h3>
               <p>Produits naturels certifiés bio, respectueux de votre santé et de la planète.</p>
             </div>
             <div class="ms-pillar ms-anim ms-anim-d1" style="--pc:rgba(255,95,160,.25)">
-              <div class="ms-pillar-icon">🏆</div>
+              <div class="ms-pillar-icon" style="color:#ffc985">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+              </div>
               <h3>Expertise certifiée</h3>
               <p>Formées aux dernières techniques, nos stylistes sont partenaires des grandes maisons.</p>
             </div>
             <div class="ms-pillar ms-anim ms-anim-d2" style="--pc:rgba(56,232,197,.25)">
-              <div class="ms-pillar-icon">💆</div>
+              <div class="ms-pillar-icon" style="color:#ff8dbb">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </div>
               <h3>Bien-être total</h3>
               <p>Chaque visite est un moment de détente et de soin complet pour votre beauté.</p>
             </div>
@@ -485,10 +605,10 @@
           <span class="ms-label">Prestations</span>
           <h2>Nos services</h2>
           <div class="ms-services-grid">
-            <div class="ms-svc-card ms-anim"><div class="ms-svc-icon">✂️</div><h3>Coupe & Brushing</h3><p>Coupe personnalisée adaptée à votre morphologie et vos envies.</p><span class="ms-svc-price">À partir de 35€</span></div>
-            <div class="ms-svc-card ms-anim ms-anim-d1"><div class="ms-svc-icon">🎨</div><h3>Coloration</h3><p>Balayage, mèches, couleur pleine — techniques tendance maîtrisées.</p><span class="ms-svc-price">À partir de 55€</span></div>
-            <div class="ms-svc-card ms-anim ms-anim-d2"><div class="ms-svc-icon">💆</div><h3>Soins capillaires</h3><p>Rituels kératine, soins nutrition, lissage brésilien.</p><span class="ms-svc-price">À partir de 45€</span></div>
-            <div class="ms-svc-card ms-anim ms-anim-d3"><div class="ms-svc-icon">👰</div><h3>Coiffage Mariage</h3><p>Chignons, ondulations, mise en plis glamour pour votre grand jour.</p><span class="ms-svc-price">Sur devis</span></div>
+            <div class="ms-svc-card ms-anim"><div class="ms-svc-icon" style="color:#d9a7ff"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div><h3>Coupe & Brushing</h3><p>Coupe personnalisée adaptée à votre morphologie et vos envies.</p><span class="ms-svc-price">À partir de 35€</span></div>
+            <div class="ms-svc-card ms-anim ms-anim-d1"><div class="ms-svc-icon" style="color:#ff8dbb"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg></div><h3>Coloration</h3><p>Balayage, mèches, couleur pleine — techniques tendance maîtrisées.</p><span class="ms-svc-price">À partir de 55€</span></div>
+            <div class="ms-svc-card ms-anim ms-anim-d2"><div class="ms-svc-icon" style="color:#6df0d4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l-1.9 5.8a2 2 0 01-1.3 1.3L3 12l5.8 1.9a2 2 0 011.3 1.3L12 21l1.9-5.8a2 2 0 011.3-1.3L21 12l-5.8-1.9a2 2 0 01-1.3-1.3z"/></svg></div><h3>Soins capillaires</h3><p>Rituels kératine, soins nutrition, lissage brésilien.</p><span class="ms-svc-price">À partir de 45€</span></div>
+            <div class="ms-svc-card ms-anim ms-anim-d3"><div class="ms-svc-icon" style="color:#ffc985"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M11 3L8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg></div><h3>Coiffage Mariage</h3><p>Chignons, ondulations, mise en plis glamour pour votre grand jour.</p><span class="ms-svc-price">Sur devis</span></div>
           </div>
         </div>
       </div>
@@ -499,12 +619,12 @@
           <span class="ms-label">Inspirations</span>
           <h2>Nos créations</h2>
           <div class="ms-photos-grid">
-            <div class="ms-photo ms-anim" style="background:linear-gradient(135deg,#1a0025,#5d1a8a)"><div class="ms-photo-inner"><span class="ms-photo-emoji">💇‍♀️</span></div><div class="ms-photo-cap">Coupe moderne</div></div>
-            <div class="ms-photo ms-anim ms-anim-d1" style="background:linear-gradient(135deg,#3d0030,#a3004a)"><div class="ms-photo-inner"><span class="ms-photo-emoji">🎨</span></div><div class="ms-photo-cap">Balayage soleil</div></div>
-            <div class="ms-photo ms-anim ms-anim-d2" style="background:linear-gradient(135deg,#0a0a2a,#2a1a6a)"><div class="ms-photo-inner"><span class="ms-photo-emoji">✨</span></div><div class="ms-photo-cap">Coiffage de soirée</div></div>
-            <div class="ms-photo ms-anim ms-anim-d1" style="background:linear-gradient(135deg,#001a1a,#003a3a)"><div class="ms-photo-inner"><span class="ms-photo-emoji">💆</span></div><div class="ms-photo-cap">Soin kératine</div></div>
-            <div class="ms-photo ms-anim ms-anim-d2" style="background:linear-gradient(135deg,#2a0a30,#7a2a8a)"><div class="ms-photo-inner"><span class="ms-photo-emoji">👰</span></div><div class="ms-photo-cap">Chignon mariage</div></div>
-            <div class="ms-photo ms-anim ms-anim-d3" style="background:linear-gradient(135deg,#1a0a30,#4a0a7a)"><div class="ms-photo-inner"><span class="ms-photo-emoji">🌸</span></div><div class="ms-photo-cap">Collection printemps</div></div>
+            <div class="ms-photo ms-anim" style="background:linear-gradient(135deg,#1a0025,#5d1a8a)"><div class="ms-photo-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div><div class="ms-photo-cap">Coupe moderne</div></div>
+            <div class="ms-photo ms-anim ms-anim-d1" style="background:linear-gradient(135deg,#3d0030,#a3004a)"><div class="ms-photo-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg></div><div class="ms-photo-cap">Balayage soleil</div></div>
+            <div class="ms-photo ms-anim ms-anim-d2" style="background:linear-gradient(135deg,#0a0a2a,#2a1a6a)"><div class="ms-photo-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l-1.9 5.8a2 2 0 01-1.3 1.3L3 12l5.8 1.9a2 2 0 011.3 1.3L12 21l1.9-5.8a2 2 0 011.3-1.3L21 12l-5.8-1.9a2 2 0 01-1.3-1.3z"/></svg></div><div class="ms-photo-cap">Coiffage de soirée</div></div>
+            <div class="ms-photo ms-anim ms-anim-d1" style="background:linear-gradient(135deg,#001a1a,#003a3a)"><div class="ms-photo-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div><div class="ms-photo-cap">Soin kératine</div></div>
+            <div class="ms-photo ms-anim ms-anim-d2" style="background:linear-gradient(135deg,#2a0a30,#7a2a8a)"><div class="ms-photo-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M11 3L8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg></div><div class="ms-photo-cap">Chignon mariage</div></div>
+            <div class="ms-photo ms-anim ms-anim-d3" style="background:linear-gradient(135deg,#1a0a30,#4a0a7a)"><div class="ms-photo-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 16.5A4.5 4.5 0 117.5 12 4.5 4.5 0 1112 7.5a4.5 4.5 0 114.5 4.5 4.5 4.5 0 11-4.5 4.5"/></svg></div><div class="ms-photo-cap">Collection printemps</div></div>
           </div>
         </div>
       </div>
@@ -528,19 +648,27 @@
           <span class="ms-label">Avis clients</span>
           <h2>Ce qu'elles disent</h2>
           <div class="ms-reviews-grid">
-            <div class="ms-review ms-anim"><div class="ms-review-stars">⭐⭐⭐⭐⭐</div><p>"Élise est une fée ! Ma couleur est exactement ce que je voulais. Je ne vais plus nulle part ailleurs."</p><div class="ms-review-author"><div class="ms-avatar" style="background:linear-gradient(135deg,#c77dff,#ff5fa0)">A</div><div><strong>Aurélie B.</strong><span>Cliente depuis 2022</span></div></div></div>
-            <div class="ms-review ms-anim ms-anim-d1"><div class="ms-review-stars">⭐⭐⭐⭐⭐</div><p>"Mon chignon de mariage était parfait et a tenu toute la nuit. Je recommande à 100%."</p><div class="ms-review-author"><div class="ms-avatar" style="background:linear-gradient(135deg,#ff5fa0,#ffb347)">C</div><div><strong>Camille R.</strong><span>Mariée en 2024</span></div></div></div>
-            <div class="ms-review ms-anim ms-anim-d2"><div class="ms-review-stars">⭐⭐⭐⭐⭐</div><p>"Les produits bio font vraiment la différence. Mes cheveux n'ont jamais été aussi beaux !"</p><div class="ms-review-author"><div class="ms-avatar" style="background:linear-gradient(135deg,#7c6fff,#38e8c5)">N</div><div><strong>Nathalie V.</strong><span>Cliente depuis 2023</span></div></div></div>
+            <div class="ms-review ms-anim"><div class="ms-review-stars" role="img" aria-label="5 étoiles sur 5"></div><p>"Élise est une fée ! Ma couleur est exactement ce que je voulais. Je ne vais plus nulle part ailleurs."</p><div class="ms-review-author"><div class="ms-avatar" style="background:linear-gradient(135deg,#c77dff,#ff5fa0)">A</div><div><strong>Aurélie B.</strong><span>Cliente depuis 2022</span></div></div></div>
+            <div class="ms-review ms-anim ms-anim-d1"><div class="ms-review-stars" role="img" aria-label="5 étoiles sur 5"></div><p>"Mon chignon de mariage était parfait et a tenu toute la nuit. Je recommande à 100%."</p><div class="ms-review-author"><div class="ms-avatar" style="background:linear-gradient(135deg,#ff5fa0,#ffb347)">C</div><div><strong>Camille R.</strong><span>Mariée en 2024</span></div></div></div>
+            <div class="ms-review ms-anim ms-anim-d2"><div class="ms-review-stars" role="img" aria-label="5 étoiles sur 5"></div><p>"Les produits bio font vraiment la différence. Mes cheveux n'ont jamais été aussi beaux !"</p><div class="ms-review-author"><div class="ms-avatar" style="background:linear-gradient(135deg,#7c6fff,#38e8c5)">N</div><div><strong>Nathalie V.</strong><span>Cliente depuis 2023</span></div></div></div>
           </div>
         </div>
       </div>
 
       <!-- FOOTER STRIP -->
       <div class="ms-footer-strip elise-fstrip">
-        <div class="ms-fstrip-item"><span>🌿</span><div><b>100% Bio</b><p>Gammes naturelles certifiées</p></div></div>
-        <div class="ms-fstrip-item"><span>📅</span><div><b>Rendez-vous</b><p>En ligne, simple et rapide</p></div></div>
-        <div class="ms-fstrip-item"><span>🏆</span><div><b>+10 ans</b><p>De passion capillaire</p></div></div>
-        <div class="ms-fstrip-item"><span>😊</span><div><b>100% satisfait</b><p>Ou retouche offerte</p></div></div>
+        <div class="ms-fstrip-item"><span class="fstrip-ic" style="color:#6df0d4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 019.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span><div><b>100% Bio</b><p>Gammes naturelles certifiées</p></div></div>
+        <div class="ms-fstrip-item"><span class="fstrip-ic" style="color:#d9a7ff"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><div><b>Rendez-vous</b><p>En ligne, simple et rapide</p></div></div>
+        <div class="ms-fstrip-item"><span class="fstrip-ic" style="color:#ffc985"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span><div><b>+10 ans</b><p>De passion capillaire</p></div></div>
+        <div class="ms-fstrip-item"><span class="fstrip-ic" style="color:#ff8dbb"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></span><div><b>100% satisfait</b><p>Ou retouche offerte</p></div></div>
+      </div>
+
+      <!-- CTA DÉMO -->
+      <div class="ms-cta">
+        <span class="ms-cta-tag">Démonstration Codewave</span>
+        <h3>Envie d'un site comme celui-ci ?</h3>
+        <p>Ce mini-site est une maquette conçue par Codewave pour illustrer notre savoir-faire. Le vôtre pourrait être en ligne dans quelques jours.</p>
+        <button class="ms-cta-btn" data-goto-contact>Démarrer mon projet →</button>
       </div>
 
     </div>
@@ -552,25 +680,27 @@
 ══════════════════════════════ -->
 <div class="modal-overlay" id="modal-thomas">
   <div class="modal-box">
-    <div class="modal-top-bar"><button class="modal-close" aria-label="Fermer">✕</button></div>
+    <div class="modal-top-bar">
+      <button class="modal-close" aria-label="Fermer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
     <div class="ms ms-thomas">
 
       <!-- HERO -->
       <div class="ms-hero ms-hero-thomas">
         <div class="ms-hero-floats">
-          <span class="ms-float" style="font-size:6rem;top:5%;right:6%;animation-duration:6s">💪</span>
-          <span class="ms-float" style="font-size:3rem;top:60%;right:20%;animation-duration:8s;animation-delay:-2s">🏆</span>
-          <span class="ms-float" style="font-size:2.5rem;top:20%;right:30%;animation-duration:7s;animation-delay:-3s">⚡</span>
-          <span class="ms-float" style="font-size:4rem;bottom:10%;right:5%;animation-duration:9s;animation-delay:-1s">🏋️</span>
+          <span class="ms-orb" style="width:280px;height:280px;background:#38e8c5;top:-70px;right:-50px"></span>
+          <span class="ms-orb" style="width:170px;height:170px;background:#00c060;bottom:-50px;right:24%;animation-delay:-3s"></span>
+          <span class="ms-ring" style="width:300px;height:300px;top:8%;right:6%"></span>
+          <span class="ms-ring" style="width:140px;height:140px;bottom:14%;right:32%;animation-delay:-4s"></span>
         </div>
         <div class="ms-hero-content">
-          <span class="ms-badge thomas-badge">🏆 Coach Certifié BPJEPS</span>
+          <span class="ms-badge thomas-badge">Coach Certifié BPJEPS</span>
           <h1>Fit By<br><span class="ms-grad-thomas">Thomas</span></h1>
           <p>Transformez votre corps, dépassez vos limites. Résultats garantis en 12 semaines.</p>
           <div class="ms-hero-tags">
-            <span>🏋️ Musculation</span>
-            <span>🏃 Cardio HIIT</span>
-            <span>🥗 Nutrition</span>
+            <span>Musculation</span>
+            <span>Cardio HIIT</span>
+            <span>Nutrition</span>
           </div>
         </div>
       </div>
@@ -607,17 +737,26 @@
           <h2>Choisissez votre programme</h2>
           <div class="ms-programs-grid">
             <div class="ms-prog-card ms-anim">
-              <div class="ms-prog-header" style="background:linear-gradient(135deg,#001505,#004a18)"><span>🔥</span><h3>Starter</h3></div>
-              <div class="ms-prog-body"><p class="ms-prog-ideal">Idéal pour débuter</p><ul><li>✓ 3 séances / semaine</li><li>✓ Programme personnalisé</li><li>✓ Suivi mensuel</li><li>✓ Accès app mobile</li></ul><span class="ms-prog-price">89€ / mois</span></div>
+              <div class="ms-prog-header" style="background:linear-gradient(135deg,#001505,#004a18)">
+                <span class="prog-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg></span>
+                <h3>Starter</h3>
+              </div>
+              <div class="ms-prog-body"><p class="ms-prog-ideal">Idéal pour débuter</p><ul class="ms-prog-list"><li>3 séances / semaine</li><li>Programme personnalisé</li><li>Suivi mensuel</li><li>Accès app mobile</li></ul><span class="ms-prog-price">89€ / mois</span></div>
             </div>
             <div class="ms-prog-card ms-prog-featured ms-anim ms-anim-d1">
-              <div class="ms-prog-badge-top">⭐ Populaire</div>
-              <div class="ms-prog-header" style="background:linear-gradient(135deg,#003820,#00a050)"><span>⚡</span><h3>Performance</h3></div>
-              <div class="ms-prog-body"><p class="ms-prog-ideal">Pour aller plus loin</p><ul><li>✓ 5 séances / semaine</li><li>✓ Plan nutrition inclus</li><li>✓ Suivi hebdomadaire</li><li>✓ Accès illimité</li></ul><span class="ms-prog-price">149€ / mois</span></div>
+              <div class="ms-prog-badge-top">Populaire</div>
+              <div class="ms-prog-header" style="background:linear-gradient(135deg,#003820,#00a050)">
+                <span class="prog-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+                <h3>Performance</h3>
+              </div>
+              <div class="ms-prog-body"><p class="ms-prog-ideal">Pour aller plus loin</p><ul class="ms-prog-list"><li>5 séances / semaine</li><li>Plan nutrition inclus</li><li>Suivi hebdomadaire</li><li>Accès illimité</li></ul><span class="ms-prog-price">149€ / mois</span></div>
             </div>
             <div class="ms-prog-card ms-anim ms-anim-d2">
-              <div class="ms-prog-header" style="background:linear-gradient(135deg,#001505,#004a18)"><span>👑</span><h3>Elite</h3></div>
-              <div class="ms-prog-body"><p class="ms-prog-ideal">Coaching 1:1 premium</p><ul><li>✓ Séances illimitées</li><li>✓ Coaching en visio</li><li>✓ Suivi quotidien</li><li>✓ Nutrition sur-mesure</li></ul><span class="ms-prog-price">249€ / mois</span></div>
+              <div class="ms-prog-header" style="background:linear-gradient(135deg,#001505,#004a18)">
+                <span class="prog-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11.562 3.266a.5.5 0 01.876 0L15.39 8.87a1 1 0 001.516.294L21.183 5.5a.5.5 0 01.798.519l-2.834 10.246a1 1 0 01-.956.735H5.81a1 1 0 01-.957-.735L2.02 6.02a.5.5 0 01.798-.519l4.276 3.664a1 1 0 001.516-.294z"/></svg></span>
+                <h3>Elite</h3>
+              </div>
+              <div class="ms-prog-body"><p class="ms-prog-ideal">Coaching 1:1 premium</p><ul class="ms-prog-list"><li>Séances illimitées</li><li>Coaching en visio</li><li>Suivi quotidien</li><li>Nutrition sur-mesure</li></ul><span class="ms-prog-price">249€ / mois</span></div>
             </div>
           </div>
         </div>
@@ -629,12 +768,12 @@
           <span class="ms-label">En action</span>
           <h2>Entraînements</h2>
           <div class="ms-photos-grid">
-            <div class="ms-photo ms-anim" style="background:linear-gradient(135deg,#001a0a,#005030)"><div class="ms-photo-inner"><span class="ms-photo-emoji">🏋️</span></div><div class="ms-photo-cap">Musculation</div></div>
-            <div class="ms-photo ms-anim ms-anim-d1" style="background:linear-gradient(135deg,#001505,#003d18)"><div class="ms-photo-inner"><span class="ms-photo-emoji">🏃</span></div><div class="ms-photo-cap">Cardio HIIT</div></div>
-            <div class="ms-photo ms-anim ms-anim-d2" style="background:linear-gradient(135deg,#001a10,#004530)"><div class="ms-photo-inner"><span class="ms-photo-emoji">🧘</span></div><div class="ms-photo-cap">Récupération active</div></div>
-            <div class="ms-photo ms-anim ms-anim-d1" style="background:linear-gradient(135deg,#0a1a00,#2a5000)"><div class="ms-photo-inner"><span class="ms-photo-emoji">🥗</span></div><div class="ms-photo-cap">Nutrition & Diète</div></div>
-            <div class="ms-photo ms-anim ms-anim-d2" style="background:linear-gradient(135deg,#002010,#006040)"><div class="ms-photo-inner"><span class="ms-photo-emoji">💪</span></div><div class="ms-photo-cap">Force & Puissance</div></div>
-            <div class="ms-photo ms-anim ms-anim-d3" style="background:linear-gradient(135deg,#001a05,#004a15)"><div class="ms-photo-inner"><span class="ms-photo-emoji">🏆</span></div><div class="ms-photo-cap">Transformations</div></div>
+            <div class="ms-photo ms-anim" style="background:linear-gradient(135deg,#001a0a,#005030)"><div class="ms-photo-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5l11 11"/><path d="M21 21l-1-1"/><path d="M3 3l1 1"/><path d="M18 22l4-4"/><path d="M2 6l4-4"/><path d="M3 10l7-7"/><path d="M14 21l7-7"/></svg></div><div class="ms-photo-cap">Musculation</div></div>
+            <div class="ms-photo ms-anim ms-anim-d1" style="background:linear-gradient(135deg,#001505,#003d18)"><div class="ms-photo-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="ms-photo-cap">Cardio HIIT</div></div>
+            <div class="ms-photo ms-anim ms-anim-d2" style="background:linear-gradient(135deg,#001a10,#004530)"><div class="ms-photo-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 009 9 9 9 0 11-9-9z"/></svg></div><div class="ms-photo-cap">Récupération active</div></div>
+            <div class="ms-photo ms-anim ms-anim-d1" style="background:linear-gradient(135deg,#0a1a00,#2a5000)"><div class="ms-photo-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0017 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 00-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06z"/><path d="M10 2c1 .5 2 2 2 5"/></svg></div><div class="ms-photo-cap">Nutrition & Diète</div></div>
+            <div class="ms-photo ms-anim ms-anim-d2" style="background:linear-gradient(135deg,#002010,#006040)"><div class="ms-photo-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="ms-photo-cap">Force & Puissance</div></div>
+            <div class="ms-photo ms-anim ms-anim-d3" style="background:linear-gradient(135deg,#001a05,#004a15)"><div class="ms-photo-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 010-5H6"/><path d="M18 9h1.5a2.5 2.5 0 000-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0012 0V2z"/></svg></div><div class="ms-photo-cap">Transformations</div></div>
           </div>
         </div>
       </div>
@@ -645,19 +784,27 @@
           <span class="ms-label">Transformations</span>
           <h2>Ils ont changé leur vie</h2>
           <div class="ms-reviews-grid">
-            <div class="ms-review ms-anim"><div class="ms-review-stars">⭐⭐⭐⭐⭐</div><p>"En 3 mois avec Thomas, j'ai perdu 12kg et gagné une confiance en moi incroyable."</p><div class="ms-review-author"><div class="ms-avatar" style="background:linear-gradient(135deg,#38e8c5,#7c6fff)">L</div><div><strong>Lucas D.</strong><span>−12kg en 3 mois</span></div></div></div>
-            <div class="ms-review ms-anim ms-anim-d1"><div class="ms-review-stars">⭐⭐⭐⭐⭐</div><p>"Programme Performance — la meilleure décision de ma vie. J'ai les résultats que je cherchais depuis des années."</p><div class="ms-review-author"><div class="ms-avatar" style="background:linear-gradient(135deg,#00c060,#38e8c5)">S</div><div><strong>Sarah M.</strong><span>+8kg de muscle</span></div></div></div>
-            <div class="ms-review ms-anim ms-anim-d2"><div class="ms-review-stars">⭐⭐⭐⭐⭐</div><p>"Thomas comprend vraiment vos objectifs. Le coaching en visio est parfait pour mon rythme de vie."</p><div class="ms-review-author"><div class="ms-avatar" style="background:linear-gradient(135deg,#004a20,#38e8c5)">P</div><div><strong>Pierre B.</strong><span>Client Elite depuis 2024</span></div></div></div>
+            <div class="ms-review ms-anim"><div class="ms-review-stars" role="img" aria-label="5 étoiles sur 5"></div><p>"En 3 mois avec Thomas, j'ai perdu 12kg et gagné une confiance en moi incroyable."</p><div class="ms-review-author"><div class="ms-avatar" style="background:linear-gradient(135deg,#38e8c5,#7c6fff)">L</div><div><strong>Lucas D.</strong><span>−12kg en 3 mois</span></div></div></div>
+            <div class="ms-review ms-anim ms-anim-d1"><div class="ms-review-stars" role="img" aria-label="5 étoiles sur 5"></div><p>"Programme Performance — la meilleure décision de ma vie. J'ai les résultats que je cherchais depuis des années."</p><div class="ms-review-author"><div class="ms-avatar" style="background:linear-gradient(135deg,#00c060,#38e8c5)">S</div><div><strong>Sarah M.</strong><span>+8kg de muscle</span></div></div></div>
+            <div class="ms-review ms-anim ms-anim-d2"><div class="ms-review-stars" role="img" aria-label="5 étoiles sur 5"></div><p>"Thomas comprend vraiment vos objectifs. Le coaching en visio est parfait pour mon rythme de vie."</p><div class="ms-review-author"><div class="ms-avatar" style="background:linear-gradient(135deg,#004a20,#38e8c5)">P</div><div><strong>Pierre B.</strong><span>Client Elite depuis 2024</span></div></div></div>
           </div>
         </div>
       </div>
 
       <!-- FOOTER STRIP -->
       <div class="ms-footer-strip thomas-fstrip">
-        <div class="ms-fstrip-item"><span>🎯</span><div><b>Résultats garantis</b><p>En 12 semaines ou remboursé</p></div></div>
-        <div class="ms-fstrip-item"><span>📱</span><div><b>100% en ligne</b><p>Disponible partout en France</p></div></div>
-        <div class="ms-fstrip-item"><span>🥗</span><div><b>Nutrition incluse</b><p>Plan alimentaire sur-mesure</p></div></div>
-        <div class="ms-fstrip-item"><span>💬</span><div><b>Support 7j/7</b><p>Thomas répond sous 2h</p></div></div>
+        <div class="ms-fstrip-item"><span class="fstrip-ic" style="color:#6df0d4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><div><b>Résultats garantis</b><p>En 12 semaines ou remboursé</p></div></div>
+        <div class="ms-fstrip-item"><span class="fstrip-ic" style="color:#a79dff"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><div><b>100% en ligne</b><p>Disponible partout en France</p></div></div>
+        <div class="ms-fstrip-item"><span class="fstrip-ic" style="color:#7be392"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0017 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 00-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06z"/><path d="M10 2c1 .5 2 2 2 5"/></svg></span><div><b>Nutrition incluse</b><p>Plan alimentaire sur-mesure</p></div></div>
+        <div class="ms-fstrip-item"><span class="fstrip-ic" style="color:#ffc985"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></span><div><b>Support 7j/7</b><p>Thomas répond sous 2h</p></div></div>
+      </div>
+
+      <!-- CTA DÉMO -->
+      <div class="ms-cta">
+        <span class="ms-cta-tag">Démonstration Codewave</span>
+        <h3>Envie d'un site comme celui-ci ?</h3>
+        <p>Ce mini-site est une maquette conçue par Codewave pour illustrer notre savoir-faire. Le vôtre pourrait être en ligne dans quelques jours.</p>
+        <button class="ms-cta-btn" data-goto-contact>Démarrer mon projet →</button>
       </div>
 
     </div>
