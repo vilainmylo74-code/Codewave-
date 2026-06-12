@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wavecod.netlify.app/sitemap.xml
+Sitemap: https://codewave-web.org/sitemap.xml
